@@ -1,0 +1,97 @@
+
+<script language="javascript" type="text/javascript">
+var n=0;
+function Validate()
+{
+Validate1();Validate2();
+Validate3();Validate4();
+cv();
+}
+
+function Validate1()
+{
+var t1=document.f1.t1.value;
+if (t1.length == 0) {    alert('Please enter details in textbox1');   }
+else {    alert(t1);     n++;   }
+}
+
+function Validate2()
+{
+if (document.f1.r1.checked == true) 
+{
+alert("Radio Butoon Value: "+document.f1.r1.value); n++;
+}
+
+else if (document.f1.r2.checked == true)
+{
+alert("Radio Butoon Value: " + document.f1.r2.value);
+n++;
+}
+else {
+alert("Please select a radio button"); 
+}
+}
+
+
+function Validate3() 
+{
+var yearvalue = document.f1.year.value;
+alert("selected Value" + yearvalue);
+if (yearvalue == 0) {
+alert("Please select a Value"); 
+}
+else {
+alert("Select Value"+document.f1.year.value);
+n++;
+} 
+}
+
+function Validate4()
+{
+var t1 = document.f1.t4.value;
+if (t1.match("@gmail.com"))
+{	
+n++;
+alert(n);
+alert(t1);
+}
+}
+
+function cv()
+{
+if (n==4)
+{
+alert("All Fields are Valid in the Form");
+return true;
+}
+else
+{
+alert("Enter Valid Fields");
+return false;
+}
+}
+
+</script>
+<body>
+
+<form name="f1" onsubmit="return Validate()"  action="http://www.google.com/" method="post"  >
+username<input  type="text"  name="t1"   id="fname"  /><br><br>
+
+<input type="radio"  id="r1"   name="gender" value="male" />male
+<input type="radio"  id="r2"   name="gender" value="female"/>female<br><br>
+
+Year
+<select name="year">
+  <option value="0">Select</option>
+  <option value="1">Year1</option>
+  <option value="2">Year2</option>
+  <option value="3">Year3</option>
+  <option value="4">Year4</option>
+</select><br><br>
+
+Email<input   type="text"  name="t4"  id="email2"/><br><br>
+
+<input type="reset" value="reset"  name="reset"  />
+<input type="submit" value="submit"  name="submit"  />
+
+</form>

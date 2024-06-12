@@ -1,0 +1,71 @@
+&lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+&lt;title&gt;JQuery Slider&lt;/title&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot;href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap
+min.css&quot;&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+                   &lt;/head&gt;
+                     &lt;body&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+&lt;div id=&quot;myCarousel&quot; class=&quot;carousel slide&quot;&gt;
+&lt;ol class=&quot;carousel-indicators&quot;&gt;
+&lt;li class=&quot;item1 active&quot;&gt;&lt;/li&gt;
+&lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;
+&lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;
+&lt;div class=&quot;item active&quot;&gt;
+&lt;img src=&quot;1.jpg&quot; alt=&quot;image1&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;item&quot;&gt;
+&lt;img src=&quot;2.jpg&quot; alt=&quot;image2&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;item&quot;&gt;
+&lt;img src=&quot;3.jpg&quot; alt=&quot;image3&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+FULL STACK WEB DEVELOPMENT LAB MANUAL
+
+40
+
+&lt;a class=&quot;left carousel-control&quot; href=&quot;#myCarousel&quot; role=&quot;button&quot;&gt;
+&lt;span class=&quot;glyphicon glyphicon-chevron-left&quot; aria-
+hidden=&quot;true&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;sr-only&quot;&gt;Prev&lt;/span&gt;
+&lt;/a&gt;
+&lt;a class=&quot;right carousel-control&quot; href=&quot;#myCarousel&quot; role=&quot;button&quot;&gt;
+&lt;span class=&quot;glyphicon glyphicon-chevron-right&quot; aria-
+hidden=&quot;true&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+$(document).ready(function(){
+$(&quot;#myCarousel&quot;).carousel();
+$(&quot;.item1&quot;).click(function(){
+$(&quot;#myCarousel&quot;).carousel(0);
+})
+$(&quot;.item2&quot;).click(function(){
+$(&quot;#myCarousel&quot;).carousel(1);
+})
+$(&quot;.item3&quot;).click(function(){
+$(&quot;#myCarousel&quot;).carousel(2);
+})
+$(&quot;.left&quot;).click(function(){
+$(&quot;#myCarousel&quot;).carousel(&quot;prev&quot;);
+})
+$(&quot;.right&quot;).click(function(){
+$(&quot;#myCarousel&quot;).carousel(&quot;next&quot;);
+})
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
